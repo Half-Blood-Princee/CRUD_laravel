@@ -37,6 +37,7 @@
         </tbody>
     </table>
     {{--Table--}}
+    {{$users->links()}}
 @endsection
 {{--Close section--}}
 
