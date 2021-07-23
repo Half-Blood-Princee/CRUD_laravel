@@ -1,1 +1,1 @@
-require('./bootstrap');//Connect bootstrap
+require('./bootstrap');
