@@ -12,14 +12,20 @@
         @csrf
         <div class="row">
             <div class="col mt-3">
-                <input name='name' value="{{isset($user) ? $user->name : null}}" type="text" class="form-control"
+                <input name='name' value="{{old('name',isset($user) ? $user->name : null)}}" type="text" class="form-control"
                        placeholder="First name" aria-label="Name">
+                @error('name')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
         </div>
         <div class="row">
             <div class="col mt-3">
-                <input name="email" value="{{isset($user) ? $user->email : null}}" type="text" class="form-control"
+                <input name="email" value="{{old('email',isset($user) ? $user->email : null)}}" type="text" class="form-control"
                        placeholder="Last name" aria-label="Email">
+                @error('email')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </div>
         </div>
         <div class="row">
